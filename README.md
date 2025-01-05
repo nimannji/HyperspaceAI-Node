@@ -76,6 +76,10 @@ aios-cli hive login
 aios-cli hive connect
 aios-cli hive select-tier 5
 ```
+You  can Upgrade to Tier-3 to receive 2x points
+```
+aios-cli hive select-tier 3
+```
 
 ### Check Points
 ```
