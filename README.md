@@ -24,19 +24,19 @@ curl https://download.hyper.space/api/install | bash
 source /root/.bashrc
 ```
 ### Create my.pem file
-'''
+```
 nano my.pem
-'''
+```
 * Then paste the private key you get in the browser part
 * Then press 'CTRL+O' to save the file, press Enter to make changes and Press 'CTRL+X' to exit the editor 
 ### Start your node
-```
+
 * Create a screen ro run it in background for later
-'''
+```
 screen -S hyperspace
-'''
+```
 * Run node
-'''
+```
 aios-cli start
 ```
 * To continue, minimize your screen using `CTRL+A+D`
