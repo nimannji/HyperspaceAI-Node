@@ -28,7 +28,7 @@ source /root/.bashrc
 nano my.pem
 ```
 * Then paste the private key you get in the browser part
-* Then press 'CTRL+O' to save the file, press Enter to make changes and Press 'CTRL+X' to exit the editor 
+* Then press `CTRL+O` to save the file, press Enter to make changes and Press `CTRL+X` to exit the editor 
 ### Start your node
 
 * Create a screen ro run it in background for later
@@ -40,21 +40,31 @@ screen -S hyperspace
 aios-cli start
 ```
 * To continue, minimize your screen using `CTRL+A+D`
-* For turning back to the screen, first you should check the all screen name using 'screen -ls' then using `screen -r screen_name`
+* For turning back to the screen, first you should check the all screen name using `screen -ls` then using `screen -r screen_name`
 
 ### Config Node
-```console
-# Download a required model
+* After use pressed `CTRL+A+D` in the previous part and returning to the main terminal you could use the following commands 
+* Download a required model
+```
 aios-cli models add hf:TheBloke/phi-2-GGUF:phi-2.Q4_K_M.gguf
-# Import your private key - Create a my.pem file using nano .pem and input a privatekey (You can get a privatekey from browser version)
+```
+* Import your private key form `my.pem` file
+```
 aios-cli hive import-keys ./my.pem
-# Set those keys as the preferred keys for this session
+```
+* Set those keys as the preferred keys for this session
+```
 aios-cli hive login
-# Make sure the model is registered
+```
+* Make sure the model is registered
+```
 aios-cli hive connect
+```
+* This one is for selecting tier, The lowest tier is 5, which also the browser uses.
+* if your vps has good hardware, you could higher tiers like 3 to to receive 2x points
+```
 aios-cli hive select-tier 5
 ```
-You  can Upgrade to Tier-3 to receive 2x points
 ```
 aios-cli hive select-tier 3
 ```
@@ -67,13 +77,20 @@ aios-cli hive points
 
 ![Screenshot_514](https://github.com/user-attachments/assets/b840775e-6c58-4fe4-bd95-a5b876ba7de5)
 
+* Sometimes this is not working. You could check your points in the browser too
 
 # Usefull commands
-```console
-# Shortcut for Start, Login and Connect to Hive commands, if you've stopped you node
-aios-cli start --connect
-# Update node
-aios-cli version
-# Stop node
+
+* Stop node
+```
 aios-cli kill
 ```
+* Shortcut for Start, Login and Connect to Hive commands, if you've stopped you node
+```
+aios-cli start --connect
+```
+* Update node
+```
+aios-cli version
+```
+
