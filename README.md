@@ -70,8 +70,8 @@ aios-cli hive select-tier 3
 ```
 
 ### Check Points
+* To check your current multiplier and points
 ```
-# To check your current multiplier and points
 aios-cli hive points
 ```
 
