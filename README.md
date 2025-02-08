@@ -15,20 +15,18 @@ You can import it later
 
 ## 2. Linux CLI Node (VPS)
 * You can also check out [Official repository](https://github.com/hyperspaceai/aios-cli?tab=readme-ov-file) for more commands and info
-
-### Installation
-```
-curl https://download.hyper.space/api/install | bash
-```
-```
-source /root/.bashrc
-```
 ### Create my.pem file
 ```
 nano my.pem
 ```
 * Then paste the private key you get in the browser part
 * Then press `CTRL+O` to save the file, press Enter to make changes and Press `CTRL+X` to exit the editor 
+### Installation
+```
+curl https://download.hyper.space/api/install | bash
+source /root/.bashrc
+```
+
 ### Start your node
 
 * Create a screen ro run it in background for later
@@ -44,21 +42,11 @@ aios-cli start
 
 ### Config Node
 * After use pressed `CTRL+A+D` in the previous part and returning to the main terminal you could use the following commands 
-* Download a required model
 ```
-aios-cli models add hf:TheBloke/phi-2-GGUF:phi-2.Q4_K_M.gguf
-```
-* Import your private key form `my.pem` file
-```
-aios-cli hive import-keys ./my.pem
-```
-* Set those keys as the preferred keys for this session
-```
-aios-cli hive login
-```
-* Make sure the model is registered
-```
-aios-cli hive connect
+aios-cli models add hf:TheBloke/phi-2-GGUF:phi-2.Q4_K_M.gguf  #Download a required model
+aios-cli hive import-keys ./my.pem                          #Import your private key form `my.pem` file
+aios-cli hive login                                      #Set those keys as the preferred keys for this session
+aios-cli hive connect                                    #Make sure the model is registered
 ```
 * This one is for selecting tier, The lowest tier is 5, which also the browser uses.
 * if your vps has good hardware, you could higher tiers like 3 to to receive 2x points
