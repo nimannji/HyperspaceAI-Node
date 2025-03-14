@@ -43,10 +43,10 @@ aios-cli start
 ### Config Node
 * After use pressed `CTRL+A+D` in the previous part and returning to the main terminal you could use the following commands 
 ```
-aios-cli models add hf:TheBloke/phi-2-GGUF:phi-2.Q4_K_M.gguf  #Download a required model
-aios-cli hive import-keys ./my.pem                          #Import your private key form `my.pem` file
-aios-cli hive login                                      #Set those keys as the preferred keys for this session
-aios-cli hive connect                                    #Make sure the model is registered
+aios-cli models add hf:TheBloke/phi-2-GGUF:phi-2.Q4_K_M.gguf  
+aios-cli hive import-keys ./my.pem                         
+aios-cli hive login                                      
+aios-cli hive connect                                    
 ```
 * This one is for selecting tier, The lowest tier is 5, which also the browser uses.
 * if your vps has good hardware, you could higher tiers like 3 to to receive 2x points
